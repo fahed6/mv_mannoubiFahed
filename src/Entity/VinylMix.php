@@ -90,14 +90,14 @@ class VinylMix
         return $this;
     }
 
-    public function getCreateAt(): ?\DateTimeImmutable
+    public function getCreatedAt(): ?\DateTimeImmutable
     {
         return $this->createdAt;
     }
 
-    public function setCreateAt(\DateTimeImmutable $createAt): static
+    public function setCreatedAt(\DateTimeImmutable $createdAt): static
     {
-        $this->createdAt = $createAt;
+        $this->createdAt = $createdAt;
 
         return $this;
     }
@@ -113,4 +113,6 @@ class VinylMix
 
         return $this;
     }
+
+    
 }
