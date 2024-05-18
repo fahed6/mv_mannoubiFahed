@@ -33,24 +33,17 @@
                         <a class="nav-link" style="margin-top: 20px;" href="{{ path('app_browse') }}">Browse Mixes</a>
                     </li>
                     <!-- If Authenticated -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fas fa-user-astronaut p-2" style="border: solid 1px #fff; border-radius: 50px; font-size: 40px;"></i>
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li>
-                                <a class="dropdown-item" href="#">My Mixes</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="{{ path('app_logout') }}">Signout</a>
-                            </li>
-                        </ul>
+                    
+                    <!-- contact -->
+					 {% if app.user %}
+					<li class="nav-item">
+                        <a class="nav-link" style="margin-top: 20px;" href="{{ path('contact') }}">Contact Us</a>
                     </li>
-                    <!-- End If Authenticated -->
+					{% endif %}
 
                     <!-- Login/Logout Button -->
                   <li class="nav-item">
-    <a href="{{ app.user ? path('app_logout') : path('app_login') }}" class="btn btn-primary btn-sm" style="padding: 10px 20px;">
+    <a href="{{ app.user ? path('app_logout') : path('app_login') }}" class="btn btn-primary btn-sm" style="margin-top: 20px;">
         {{ app.user ? 'Logout' : 'Login' }}
     </a>
 </li>
